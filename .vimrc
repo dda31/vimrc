@@ -3,13 +3,28 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" start vundle Plugins
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" shows a git diff in the gutter (sign column) and stages/undoes hunks
+Plugin 'airblade/vim-gitgutter'
+
+" A tree explorer plugin for vim
 Plugin 'scrooloose/nerdtree'
+
+" Please Vim, stop with these swap file messages. Just switch to the correct window!
+Plugin 'gioele/vim-autoswap'
+
+" Better whitespace highlighting for Vim
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
