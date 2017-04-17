@@ -40,3 +40,20 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" nice colors
+colorscheme elflord
+
+" show 80th column
+let &colorcolumn=join(range(81,82),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+
+" ignore case and smart case
+:set ignorecase
+:set smartcase
+
+" ctrl c/v/x copy, paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
